@@ -39,9 +39,6 @@ namespace AMSWindowApp
             _level = 1;
             _numKills = 0;
             _totalTroops = 0;
-            //soldiers = new List<Unit>();
-            //tanks = new List<Unit>();
-            //copters = new List<Unit>();
 
             soldiers = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
             tanks = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };

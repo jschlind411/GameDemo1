@@ -25,19 +25,21 @@ namespace AMSWindowApp
             picbxPlayerAvatar.Image = player.GetAvatar;
         }
 
-        private Player loadGame()
-        {
-            bool canFindPlayer = false;
+        #region main form updates
 
-            if(canFindPlayer)
-            {
-                return new Player();
-            }
-            else
-            {
-                return new Player();
-            }
+        private void update_Tick(object sender, EventArgs e)
+        {
+            updateGui();
         }
+
+        private void updateGui()
+        {
+            btnTroops.Text = player.GetTotalTroops().ToString();
+        }
+        #endregion
+
+        #region game buttons
+
 
         private void btnOfficers_Click(object sender, EventArgs e)
         {
@@ -64,14 +66,24 @@ namespace AMSWindowApp
 
         }
 
-        private void update_Tick(object sender, EventArgs e)
+        #endregion
+
+        #region game loading
+
+        private Player loadGame()
         {
-            updateGui();
+            bool canFindPlayer = false;
+
+            if (canFindPlayer)
+            {
+                return new Player();
+            }
+            else
+            {
+                return new Player();
+            }
         }
 
-        private void updateGui()
-        {
-            btnTroops.Text = player.GetTotalTroops().ToString();
-        }
+        #endregion
     }
 }

@@ -131,6 +131,7 @@
             this.Controls.Add(this.btnOfficers);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.picbxPlayerAvatar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
